@@ -1,0 +1,296 @@
+values:
+    username:
+        regex: '(@[\w-]{3,20})'
+    amount:
+        regex: '([0-9]{1,9}(?:\.[0-9]{0,16})?)'
+    keywords:
+        regex: '(all|flip|megaflip|gigaflip|roll|megaroll|gigaroll|sushi|random01|random05|random1|random3|random5|random10|random15|random25|random50|random100|random250|random500|random1000|upvote|pi|e|leet|quarter|half|cookie|nothing|gum|beer|nicebeer|hug|kiss|nyan|highfive|fart|coffee)'
+    tip_init:
+        regex: '(/u/mybotuser|mybotuser)'
+
+actions:
+    givetip:
+        enabled: true
+        public: true
+        simple: false
+        regex:
+            a:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 4
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            aa:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 4
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            b:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 6
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 8
+                rg_fiat: 0
+            bb:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 6
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 8
+                rg_fiat: 0
+            bbb:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_COIN}{REGEX_AMOUNT}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            bbbb:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_COIN}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            c:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 6
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 8
+                rg_fiat: 0
+            cc:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 6
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 8
+                rg_fiat: 0
+            ccc:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_COIN}{REGEX_AMOUNT}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 6
+                rg_fiat: 0
+            cccc:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_COIN}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 6
+                rg_fiat: 0
+            d:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_FIAT}{REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 5
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 7
+                rg_fiat: 4
+            dd:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_FIAT}{REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 5
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 7
+                rg_fiat: 4
+            e:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_FIAT}{REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 9
+                rg_fiat: 6
+            ee:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_ADDRESS}(\s+){REGEX_FIAT}{REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 9
+                rg_fiat: 6
+            f:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_FIAT}{REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 9
+                rg_fiat: 6
+            ff:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_FIAT}{REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 9
+                rg_fiat: 6
+            g:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_COIN}{REGEX_AMOUNT}'
+                rg_amount: 5
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 4
+                rg_fiat: 0
+            gg:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_COIN}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 5
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 4
+                rg_fiat: 0
+            ggg:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_FIAT}{REGEX_AMOUNT}'
+                rg_amount: 5
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 0
+                rg_fiat: 4
+            gggg:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_FIAT}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 5
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 0
+                rg_fiat: 4
+            ggggg:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 4
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 0
+                rg_fiat: 0
+            h:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_FIAT}{REGEX_AMOUNT}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 0
+                rg_fiat: 6
+            hh:
+                value: '(\+){REGEX_TIP_INIT}(\s+){REGEX_USER}(\s+){REGEX_FIAT}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 0
+                rg_to_user: 4
+                rg_coin: 0
+                rg_fiat: 6
+    info:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(info|balance)'
+    register:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(register)'
+    accept:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(accept)'
+    decline:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(decline)'
+    withdraw:
+        enabled: true
+        public: false
+        simple: false
+        regex:
+            a:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 6
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 8
+                rg_fiat: 0
+            aa:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 6
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 8
+                rg_fiat: 0
+            aaa:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_COIN}{REGEX_AMOUNT}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            aaaa:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_COIN}{REGEX_KEYWORD}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 6
+                rg_fiat: 0
+            b:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_FIAT}{REGEX_AMOUNT}(\s+){REGEX_COIN}'
+                rg_amount: 7
+                rg_keyword: 0
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 9
+                rg_fiat: 6
+            bb:
+                value: '(\+)(withdraw)(\s+){REGEX_ADDRESS}(\s+){REGEX_FIAT}{REGEX_KEYWORD}(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 7
+                rg_address: 4
+                rg_to_user: 0
+                rg_coin: 9
+                rg_fiat: 6
+    history:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(history)'
+    redeem:
+        enabled: true
+        public: false
+        simple: false
+        regex:
+            a:
+                value: '(\+)(redeem)(\s+){REGEX_COIN}'
+                rg_amount: 0
+                rg_keyword: 0
+                rg_address: 0
+                rg_to_user: 0
+                rg_coin: 4
+                rg_fiat: 0
+    rates:
+        enabled: true
+        public: false
+        simple: true
+        regex: '(\+)(rates)'

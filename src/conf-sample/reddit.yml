@@ -1,0 +1,48 @@
+auth:
+    user: 'mybotuser'
+    password: 'mybotpass'
+
+scan:
+    batch_limit: 1000
+    my_subreddits: false
+#    these_subreddits: ["all"]
+
+help:
+    enabled: true
+    url: 'http://www.reddit.com/r/mysubreddit/wiki/index'
+
+contact:
+    enabled: true
+    url: 'http://www.reddit.com/message/compose/?to=YOUR_NAME'
+
+messages:
+    verified: true
+    pending: false
+    expired: false
+    declined: false
+    sorry: true
+
+redeem:
+    unit: 'usd'
+    multicoin: true
+    min_karma: 150
+    base: 0.1
+    multiplier:
+        link: 0.00005
+        comment: 0.000005
+    maximum: 0.5
+    account: 'YOUR_ACCOUNT_NAME'
+
+banned_users:
+    method: list
+    list: ['mybotuser', 'bitcointip', 'altcointip']
+    subreddit: 'mysubreddit'
+
+stats:
+    enabled: false
+    userflair: false
+    subreddit: 'mysubreddit'
+    page: 'stats'
+    url: 'http://www.reddit.com/r/mysubreddit/wiki/stats'
+    page_tips: 'tips'
+    url_tips: 'http://www.reddit.com/r/mysubreddit/wiki/tips'

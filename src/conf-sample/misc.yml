@@ -1,0 +1,18 @@
+times:
+    sleep_seconds: 60
+    expire_pending_hours: 48
+
+backup:
+    encryptionpassphrase: 'ChangeAndRememberMe11'
+
+qr_service_url: 'https://chart.googleapis.com/chart?cht=qr&choe=UTF-8&chs=300x300&chl='
+
+notify:
+    enabled: false
+    addr_from: 'user@example.com'
+    addr_to: 'you@example.com'
+    subject: 'ALTcointip error'
+    smtp_host: 'smtp.gmail.com:587'
+    smtp_tls: true
+    smtp_username: 'user@example.com'
+    smtp_password: 'examplePass'
